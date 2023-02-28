@@ -50,6 +50,8 @@ $nilais =  [
  
     ];
 
+    echo "<h1>N I L A I</h2>";
+
      echo"</br></br></br></br><table border=1>
     <tr>
         <th> Mata Kuliah </th>
