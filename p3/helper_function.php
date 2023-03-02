@@ -33,6 +33,7 @@ function getAM($nilais){
         "b+" => 3.3,
           "b" => 3,
            "c+" => 2.7,
+           "d" => 2.0
 
     ];
     return $am[$nilais];
@@ -42,6 +43,33 @@ function getM ($am,  $k){
 
     return $am*$k;
 } 
+function getIPK($total_m, $total_k)
+{
+    return number_format(($total_m/$total_k), 2);
+}
 
+function getPredikatKelulusan($ipk , $adaD = false){
 
+   if($ipk > 3.51){
+        if($adaD == true){
+            $predikat= "Sangat Memuaskan";
+        }
+        else{
+        $predikat = "Dengan Pujian";
+            }   
+    }
+   else if($ipk >= 3.01){
+         $predikat = "Sangat Memuaskan";
+   }
+    else if($ipk >= 2.76){
+         $predikat = "Memuaskan";
+   }
+    else if($ipk >= 2.5){
+         $predikat = "Lulus";
+   }
+   else{
+    $predikat = "Tidak Lulus";
+   }
+   return $predikat;
+}
 ?>
