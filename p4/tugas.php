@@ -1,6 +1,5 @@
 <?php
-
-require("helper_function.php");
+require("helperp4.php");
  
 // treko();
 
@@ -24,13 +23,13 @@ $nilais =  [
     [
         "mk" => "Aplikasi Bisnis",
         "kode_mk" => "IF0041",
-        "hm" => "a",
+        "hm" => "d",
         "k" => 3,
     ],
     [
         "mk" => "Matematika Diskrit",
         "kode_mk" => "I1207",
-        "hm" => "a",
+        "hm" => "d",
         "k" => 4,
     ],
     [
@@ -75,7 +74,9 @@ $total_k = 0;
 $total_m = 0;
  $adaD = false;
  $no = 1;
-
+ $TA = false;
+ $nilaiE = false;
+ $minimalD = 0;
 foreach ($nilais as $data) {
 
     if($data['kode_mk'] == 'IF0055'){
@@ -89,7 +90,7 @@ foreach ($nilais as $data) {
      }
      if($data['hm'] == 'd'){
            $adaD = true;
-              
+           $minimalD += $data['k'];   
         }
     
    
@@ -111,11 +112,9 @@ foreach ($nilais as $data) {
 echo "<><td colspan='5'>JUMLAH</td><td>".$total_k."</td><td>".$total_m."</td></tr>";
 echo "<><td colspan='5'>IPK</td><td colspan =2>".getIPK($total_m, $total_k)."</td></tr>";
 echo "<><td colspan='7' align = center>PREDIKAT : ".getPredikatKelulusan(getIPK($total_m, $total_k), $adaD)."</td></tr>";
-
+echo "<><td colspan='7' align = center>YUDISIUM : ".getYudisium($TA,getIPK($total_m, $total_k),$nilaiE,$minimalD)."</td></tr>";
+echo "<tr><td colspan='7' align = center>Dengan Nilai D : ".$minimalD." SKS</td></tr>";
 
 
 echo "</table>";
-
-
-
 ?>

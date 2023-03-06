@@ -76,29 +76,4 @@ function getPredikatKelulusan($ipk , $adaD = false){
    return $predikat;
 }
 
-function getYudisium($TA = false, $ipk, $nilaiE, $nilaiD){
-    if($TA == true){
-        if($ipk >= 2.5){
-            if($nilaiE == false){
-                    if($nilaiD <= 8 ){
-                        $prasyarat = "Memenuhi";
-                }
-                else{
-                    $prasyarat = "Tidak Memenuhi";
-                }
-            }
-            else{
-                $prasyarat = "Tidak Memenuhi";
-            }
-        }
-        else{
-            $prasyarat = "Tidak Memenuhi";
-        } 
-    }
-   
-  else{
-    $prasyarat = "Tidak Memenuhi";
-}
-return $prasyarat;
-}
 ?>
