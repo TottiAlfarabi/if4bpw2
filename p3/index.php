@@ -43,10 +43,18 @@ $nilais =  [
     [
         "mk" => " Kalkulus 1",
         "kode_mk" => "IF0036",
-        "hm" => "d",
+        "hm" => "a",
         "k" => 3,
        
-    ],];
+    ],
+    [
+        
+        "mk"    => "Tugas Akhir",
+        "kode_mk"   => "IF0055",
+        "hm"        => "a",
+        "k"         => 4,
+
+    ]];
 
 
 
@@ -67,10 +75,28 @@ $total_k = 0;
 $total_m = 0;
  $adaD = false;
  $no = 1;
+ $TA = false;
+ $nilaiE = false;
+ $minimalD = 0;
 foreach ($nilais as $data) {
-     if($data['hm'] == 'd'){
-           $adaD = true; 
+
+    if($data['kode_mk'] == 'IF0055'){
+        if($data['hm'] != 'd' && $data['hm'] != 'e' ){
+            $TA = true;
         }
+       
+    }
+    if($data['hm'] == 'e'){
+        $nilaiE = true; 
+     }
+     if($data['hm'] == 'd'){
+           $adaD = true;
+           $minimalD += $data['k'];   
+        }
+    
+   
+    
+    
     $total_k += $data['k'];
     $total_m += getM(getAM($data['hm']), $data['k']);
     echo " <tr>
@@ -87,6 +113,8 @@ foreach ($nilais as $data) {
 echo "<><td colspan='5'>JUMLAH</td><td>".$total_k."</td><td>".$total_m."</td></tr>";
 echo "<><td colspan='5'>IPK</td><td colspan =2>".getIPK($total_m, $total_k)."</td></tr>";
 echo "<><td colspan='7' align = center>PREDIKAT : ".getPredikatKelulusan(getIPK($total_m, $total_k), $adaD)."</td></tr>";
+echo "<><td colspan='7' align = center>YUDISIUM : ".getYudisium($TA,getIPK($total_m, $total_k),$nilaiE,$minimalD)."</td></tr>";
+echo "<tr><td colspan='7' align = center>Dengan Nilai D : ".$minimalD." SKS</td></tr>";
 
 
 echo "</table>";
