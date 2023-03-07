@@ -12,11 +12,11 @@
         <div class="row">
             <div class="col">
                 <h2>Form Registrasi</h2>
-                <form action="proses.php" method="post">
+                <form action="proses.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>NIS</label>
                         <input type="number" class="form-control" name="nis">
-
+                    <!-- </div> -->
                          <label>Nama</label>
                         <input type="text" class="form-control" name="nama"><br>
 
@@ -38,7 +38,7 @@
                         <input type="date" class="form-control" name="tgl"><br>
 
                         <label>FOTO</label>
-                         <input type="file" class="form-control" name="poto"><br>
+                         <input type="file" class="form-control" name="poto" accept="image/png, image/jpeg "><br>
 
 
 <!-- 
