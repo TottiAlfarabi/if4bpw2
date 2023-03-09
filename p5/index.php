@@ -29,10 +29,10 @@
 
                         <label>Kota Lahir</label>
                         <select name="kota" class="form-control">
-                        <option value="plg">Palembang</option>
-                        <option value="lahat">Lahat</option>
-                        <option value="linggau">Linggau</option>
-                        <option value="pali">Pali</option>
+                        <option value="1">Palembang</option>
+                        <option value="2">Lahat</option>
+                        <option value="3">Linggau</option>
+                        <option value="4">Pali</option>
                         </select><br><br>
 
                          <label>Tanggal Lahir</label>

@@ -72,7 +72,7 @@
                     </tr>
                      <tr>
                         <td>Kota</td>
-                         <td>: <?php echo $kota; ?></td>
+                         <td>: <?php echo getKota($kota); ?></td>
                     </tr>
                      <tr>
                         <td>Tanggal Lahir</td>
