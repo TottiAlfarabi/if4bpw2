@@ -20,7 +20,17 @@
             echo $kota."<br>";
             echo $tglLahir ."<br>";
 
+           
+        
+
             var_dump($foto);
+
+            $temp = explode(".", $_FILES["foto"]["name"]);
+            $newfilename = $nis . '.' . end($temp);
+            move_uploaded_file($_FILES["foto"]["tmp_name"], "uploads/" . $newfilename);
+
+
+            // upload foto
     }
     else{
         echo "Silahkan isi form terlebih dahulu";
