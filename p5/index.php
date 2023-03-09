@@ -20,11 +20,12 @@
                          <label>Nama</label>
                         <input type="text" class="form-control" name="nama"><br>
 
+                        <!-- <div class="form-group"></div> -->
                         <label>Jenis Kelamin</label><br>
-                        <input type="radio" class="radio" name="JK" value="Lanang">
-                        <label for="Lanang">Lanang</label><br>
-                        <input type="radio" class="radio" name="JK" value="betina">
-                        <label for="betina">Betina</label><br><br>
+                        <input type="radio" class="radio" name="JK" value="l">
+                        <label for="l">Lanang</label><br>
+                        <input type="radio" class="radio" name="JK" value="p">
+                        <label for="p">Betina</label><br><br>
 
                         <label>Kota Lahir</label>
                         <select name="kota" class="form-control">
