@@ -38,7 +38,7 @@
                         <input type="date" class="form-control" name="tgl"><br>
 
                         <label>FOTO</label>
-                         <input type="file" class="form-control" name="poto" accept="image/png, image/jpeg "><br>
+                         <input type="file" class="form-control" name="foto" accept="image/png, image/jpeg "><br>
 
 
 <!-- 
