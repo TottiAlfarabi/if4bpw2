@@ -56,7 +56,7 @@ if (isset($_POST['username']) && isset($_POST['nama'])) {
     <div class="row align-items-start m-auto mb-2 justify-content-center ">
     <div class="col-lg-3 col-sm-2">
     <div class="card" style="width: 18rem;">
-          <img src="img/ecology.png" class="card-img-top" alt="..." ">
+          <img src="img/penghijauan.jpg" class="card-img-top" alt="..." ">
           <div class="card-body">
             <p class="card-text text-center">Komputer Hijau</p>
           </div>
@@ -64,7 +64,7 @@ if (isset($_POST['username']) && isset($_POST['nama'])) {
     </div>
     <div class="col-lg-3 col-sm-2">
     <div class="card " style="width: 18rem;">
-          <img src="img/ml.png" class="card-img-top" alt="..." >
+          <img src="img/Machine-Learning.jpg" class="card-img-top" alt="..." >
           <div class="card-body">
             <p class="card-text text-center">Machine Learning</p>
           </div>
@@ -72,7 +72,7 @@ if (isset($_POST['username']) && isset($_POST['nama'])) {
     </div>
     <div class="col-lg-3 col-sm-2">
     <div class="card " style="width: 18rem; ">
-          <img src="img/ba.png" class="card-img-top" alt="..." >
+          <img src="img/ba.jpg" class="card-img-top" alt="..." >
           <div class="card-body">
             <p class="card-text text-center">Business Analyst</p>
         </div>
