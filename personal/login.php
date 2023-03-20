@@ -2,7 +2,7 @@
 // memulai session
 session_start();
 if (isset($_POST['username'])) {
-    header('Location: proses.php');
+    header('Location: function.php');
 }
 ?>
 <!DOCTYPE html>
@@ -37,7 +37,7 @@ if (isset($_POST['username'])) {
                             unset($_SESSION['sukses']);
                         }
                         ?>
-                        <form action="proses.php" method="POST" style="color: black">
+                        <form action="function.php" method="POST" style="color: black">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="floatingInput" name="username">
                                 <label for="floatingInput">Username</label>
