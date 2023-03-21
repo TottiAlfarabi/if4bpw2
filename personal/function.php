@@ -1,22 +1,14 @@
 <?php
-
+session_start();
 $serverName = "LAPTOP-978R728N";
 
 $connection = array("Database"=> "account");
 
 $conn = sqlsrv_connect($serverName, $connection);
 
+ 
 
-if (!$conn) {
-    die(print_r(sqlsrv_errors(), true));
-}
-
-// else{
-//     echo 'connected';
-// }
-
-
-$sql = "SELECT * FROM users";
+$sqlGet = "SELECT * FROM users";
 
 function query($syntax){
     global $conn;
@@ -29,15 +21,15 @@ function query($syntax){
     return $rows;
 }
 
-$stmt = query($sql);
+$stmt = query($sqlGet);
 
+$canLogin = false;
 
-session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 foreach($stmt as $data){
     if($data['password'] == $password && $data['username'] == $username){
-       
+        $canLogin = true;
         $_SESSION['username'] = $data['username'];
      
         header('Location: dashboard.php');
@@ -45,6 +37,13 @@ foreach($stmt as $data){
 
     
 }
+
+
+if (!$canLogin) {
+    $_SESSION['error'] = 'Username dan password salah!';
+    header('Location: signup.php');
+}
+
 
 
 

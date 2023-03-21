@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Input Kata Sandi dengan Atribut Mata</title>
+	<style>
+		.password-wrapper {
+			position: relative;
+		}
+		.password-toggle {
+			position: relative;
+			top: 50%;
+			right: 5px;
+			transform: translateY(-50%);
+			cursor: pointer;
+		}
+		.password-input {
+			padding-right: 30px;
+		}
+	</style>
+</head>
+<body>
+	<label for="password">Kata Sandi:</label>
+	<div class="password-wrapper">
+		<input type="password" name="password" id="password" class="password-input">
+		<label for="password" class="password-toggle" onclick="togglePasswordVisibility()">
+			<img src="https://cdn-icons-png.flaticon.com/512/159/159078.png" style="width:20px;height:20px" alt="toggle password visibility">
+		</label>
+	</div>
+	
+	<script>
+		function togglePasswordVisibility() {
+			var passwordField = document.getElementById("password");
+			var passwordToggle = document.querySelector(".password-toggle");
+			if (passwordField.type === "password") {
+				passwordField.type = "text";
+				passwordToggle.innerHTML = '<img src="https://cdn-icons-png.flaticon.com/512/159/159078.png" style="width:20px;height:20px">';
+			} else {
+				passwordField.type = "password";
+				passwordToggle.innerHTML = '<img src="https://cdn-icons-png.flaticon.com/512/159/159078.png" style="width:20px;height:20px">';
+			}
+		}
+	</script>
+</body>
+</html>
