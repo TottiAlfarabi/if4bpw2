@@ -97,7 +97,7 @@ foreach($mahasiswa as $data){
         $data['jk']."<br>";
 
         if($data['jk']== 'l'){
-            $jumlahLK =+ 1;
+            $jumlahLK += 1;
         }
         else if($data['jk']=='p'){
              $jumlahPR += 1;
